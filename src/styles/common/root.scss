@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        font-family: 'FontAwesome';
+    }
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+body {
+    font-family: 'Montserrat';
+    background: $bg;
+}
+
+.icon {
+    &-search::before {
+        content: '\f002';
+        font-weight: 300;
+    }
+    &-heart::before {
+        content: '\f004';
+        font-weight: 300;
+    }
+    &-cart::before {
+        content: '\f07a';
+        font-weight: 300;
+    }
+    &-user::before {
+        content: '\f007';
+        font-weight: 300;
+    }
+    &-burger::before {
+        content: '\f0c9';
+        font-weight: 300;
+    }
+    &-clock::before{
+        content: '\f017';
+        font-weight: 300;
+    }
+    &-vcontact::before {
+        content: '\f189';
+        // font-weight: 300;
+    }
+    &-youtube::before {
+        content: '\f167';
+        // font-weight: 300;
+    }
+    &-instagram::before {
+        content: '\f16d';
+        // font-weight: 300;
+    }
+    &-facebook::before {
+        content: '\f39e';
+        // font-weight: 300;
+    }
+}

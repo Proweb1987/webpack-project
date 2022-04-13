@@ -1,0 +1,20 @@
+header.header
+    .header__prenav
+        a.header__prenav-lang(href="#!") ru 
+        h1.header__prenav-title TOTEMBO
+        span.header__prenav-search.icon-search
+    nav.header__nav 
+        .header__nav-container
+            .bg
+            button.header__btn.icon-burger
+            ul.header__nav-list 
+                -var nav = ['Часы', 'Кольца', 'Серьги','Браслеты','Клатчи','Цепочки']
+                each val in nav
+                    li.header__nav-li
+                        a.header__nav-link(href="#!")= val
+            .header__nav-icons 
+                a.header__nav-icon.icon-heart(href="#!") 
+                a.header__nav-icon.icon-cart(href="#!") 
+                a.header__nav-icon.icon-user(href="#!")
+
+

@@ -1,0 +1,16 @@
+.main__mid 
+    h2.title ЛИдеры продаж
+    .main__leader
+        -var item = {img: 'leader-img.png', title: 'Fantastic Style', price: '1 128 000 UZS', discount: '50%' }
+            -for(var i = 0; i < 12;i++)
+                .main__leader-item 
+                    img(src=require('@/images/' + item.img), alt="").main__leader-img
+                    h3.main__leader-title= item.title
+                    p.main__leader-price= item.price 
+                    span.main__leader-discount= item.discount
+                    .main__leader-icons
+                        a.main__leader-icon.icon-heart(href="#") 
+                        a.main__leader-icon.icon-cart(href="#")      
+
+
+            

@@ -1,0 +1,113 @@
+.container {
+    @include container();
+}
+.row{
+    @include row(0);
+}
+.header {
+    .bg {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.30);
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        display: none;
+        &.active {
+            display: flex;
+        }
+    }
+    &__btn {
+        padding: 6px 10px;
+        font-size: 20px;
+        border: none;
+        outline: none;
+        border-radius: 50%;
+        display: none;
+        @include media($md) {
+            display: flex;
+        }
+    }
+    &__prenav {
+        @extend .container;
+        @extend .row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        &-lang {
+            font-size: 18px;
+            line-height: 13px;
+            font-weight: 400;
+            color: $greyDark;
+            text-transform: uppercase;
+        }
+        &-title {
+            font-size: 32px;
+            line-height: 23px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $greyDark;
+        }
+        &-search {
+            font-size: 20px;
+            color: $black;
+        }
+    }
+    &__nav {
+        padding: 20px 15px;
+        border-top: 1px solid #C4C4C4;
+        border-bottom: 1px solid #C4C4C4;
+        backdrop-filter: blur(15px);
+        width: 100%;
+        z-index: 9999;
+        &-container {
+            @extend .container;
+            @extend .row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &-list {
+            display: flex;
+            gap: 50px;
+            @include media($md) {
+                flex-direction: column;
+                position: absolute;
+                top: 0;
+                left: -100%;
+                background: $bg;
+                width: 300px;
+                height: 100vh;
+                padding: 50px 0;
+                overflow: auto;
+                border-right: 1px solid red;
+                transition: left 300ms;
+                &.active {
+                    left: 0;
+                }
+            }
+        }
+        &-link {
+            font-size: 16px;
+            line-height: 20px;
+            text-transform: capitalize;
+            color: $greyDark;
+            @include media($md) {
+                text-align: center;
+                display: block;
+                padding: 10px;
+
+            }
+        }
+        &-icons {
+            display: flex;
+            column-gap: 30px;
+        }
+        &-icon {
+            font-size: 18px;
+            color: $black;
+        }
+    }
+
+}

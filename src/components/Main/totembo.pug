@@ -1,0 +1,12 @@
+-var product = ['clockbig.png', 'clocklittle.png', 'clocklittle.png']
+.main__top 
+    each img in product 
+        .main__top-item 
+            img(src=require('@/images/' + img), alt="").main__top-img
+            .main__top-info 
+                h2.main__top-title Fantastic Style
+                p.main__top-price 1 128 000 UZS
+            span.main__top-discount 50%
+            .main__top-icons 
+                a.main__top-icon.icon-heart(href="#") 
+                a.main__top-icon.icon-cart(href="#")             

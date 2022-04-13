@@ -1,0 +1,30 @@
+footer.footer 
+    .footer__box 
+        .footer__box-item 
+            h3.footer__box-title ТОВАРЫ
+            ul.footer__box-list 
+                -var btn = ['Часы','Кольца','Серьги','Браслеты','Клатчи','Цепочки']
+                each value in btn 
+                    li.footer__box-li 
+                        a.footer__box-btn(href="#!")= value
+        .footer__box-item
+            h3.footer__box-title ПОКУПАТЕЛЯМ
+            ul.footer__box-list 
+                li.footer__box-li 
+                    a.footer__box-btn(href="#!") Скидки 
+                    a.footer__box-btn(href="#!") Новости
+        .footer__box-item 
+        
+            h3.footer__box-title ПОКУПАТЕЛЯМ
+            p.footer__box-text Ул. Аския, Яккасарайский район, Ташкент, Узбекистан
+            .footer__box-contact 
+                p.footer__box-number +998 97 742 54 14
+                p.footer__box-number +998 97 742 54 14
+            a.footer__box-mail(href="#!") totembo@exapmle.com
+            p.footer__box-local СОЦИАЛЬНЫЕ СЕТИ 
+            .footer__box-social 
+                a.footer__box-icon.icon-vcontact(href="#!")  
+                a.footer__box-icon.icon-youtube(href="#!")  
+                a.footer__box-icon.icon-instagram(href="#!")  
+                a.footer__box-icon.icon-facebook(href="#!")  
+

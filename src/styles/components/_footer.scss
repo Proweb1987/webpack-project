@@ -1,0 +1,109 @@
+.footer {
+    background: $white;
+    padding-top: 65px;
+    padding-bottom: 83px;
+    &__box {
+        @include container();
+        display: flex;
+        justify-content: space-between;
+        @include media($md) {
+            flex-direction: column;
+            align-items: center;
+            & .footer__box-item {
+                &:nth-of-type(2) {
+                    margin-top: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+            & .footer__box-item {
+                &:nth-of-type(3) {
+                    margin-top: 25px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+        &-title {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            color: $greyDark;
+            margin-bottom: 40px;
+        }
+        &-btn {
+            font-size: 18px;
+            line-height: 13px;
+            color: $black;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+        &-item {
+            &:nth-of-type(2) {
+                & .footer__box-li {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 10px;
+                }
+                & .footer__box-list {
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                & .footer__box-btn {
+                    font-size: 18px;
+                    line-height: 13px;
+                    color: $black;
+                }
+            }
+        }
+        &-text {
+            font-size: 18px;
+            line-height: 22px;
+            color: $greyDark;
+            @include media($xs) {
+              width: 310px;
+              text-align: center;  
+            }
+        }
+        &-contact {
+            display: flex;
+            column-gap: 10px;
+            margin: 15px 0;
+            @include media(400px) {
+                flex-direction: column;
+            } 
+        }
+        &-number {
+            font-size: 18px;
+            line-height: 22px;
+            color: $greyDark;
+        }
+        &-mail {
+            font-size: 18px;
+            line-height: 22px;
+            color: $greyDark;
+            text-transform: uppercase;
+        }
+        &-local {
+            font-size: 18px;
+            line-height: 22px;
+            color: $greyDark;
+            text-transform: uppercase;
+            margin-top: 25px;
+            margin-bottom: 22px;
+        }
+        &-social {
+            display: flex;
+            column-gap: 15px;
+        }
+        &-icon {
+            font-size: 18px;
+            color: $black;
+        }
+    }
+}
